@@ -1,0 +1,146 @@
+{
+	"id": "b89952a5-1134-4ae5-867b-610c45030dee",
+	"name": "petstore",
+	"timestamp": "2023-10-17T10:44:47.793Z",
+	"collection_id": "30530385-3074fab0-69d7-46e4-9120-ab27fd67dda1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-10-17T10:44:45.064Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "34ac6673-6481-4842-ac1e-4972d610e990",
+			"name": "https://petstore.swagger.io/v2/user",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 865,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check status code": true
+			},
+			"testPassFailCounts": {
+				"Check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				865
+			],
+			"allTests": [
+				{
+					"Check status code": true
+				}
+			]
+		},
+		{
+			"id": "470dce91-47c3-4834-9c5b-78115ecd2f1c",
+			"name": "https://petstore.swagger.io/v2/user/prince",
+			"url": "https://petstore.swagger.io/v2/user/prince4fpzdhq828z",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check status code": true
+			},
+			"testPassFailCounts": {
+				"Check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Check status code": true
+				}
+			]
+		},
+		{
+			"id": "a45df223-b073-4652-b1f3-f8cc7e076323",
+			"name": "https://petstore.swagger.io/v2/user/blackprince",
+			"url": "https://petstore.swagger.io/v2/user/prince4fpzdhq828z",
+			"time": 261,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check status code": true
+			},
+			"testPassFailCounts": {
+				"Check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Check status code": true
+				}
+			]
+		},
+		{
+			"id": "43b4dfc7-8f63-44c1-a4b1-50984c6e5698",
+			"name": "https://petstore.swagger.io/v2/user/prince",
+			"url": "https://petstore.swagger.io/v2/user/prince4fpzdhq828z",
+			"time": 252,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check status code": true
+			},
+			"testPassFailCounts": {
+				"Check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				252
+			],
+			"allTests": [
+				{
+					"Check status code": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1633,
+	"collection": {
+		"requests": [
+			{
+				"id": "34ac6673-6481-4842-ac1e-4972d610e990",
+				"method": "POST"
+			},
+			{
+				"id": "470dce91-47c3-4834-9c5b-78115ecd2f1c",
+				"method": "GET"
+			},
+			{
+				"id": "a45df223-b073-4652-b1f3-f8cc7e076323",
+				"method": "PUT"
+			},
+			{
+				"id": "43b4dfc7-8f63-44c1-a4b1-50984c6e5698",
+				"method": "DELETE"
+			}
+		]
+	}
+}
