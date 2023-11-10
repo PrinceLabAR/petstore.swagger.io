@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "08e65ad1-d18b-475c-9e2f-ccca6ae42057",
+		"name": "PetStore API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30993330"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 42,\r\n  \"username\": \"qups\",\r\n  \"firstName\": \"prince\",\r\n  \"lastName\": \"roy\",\r\n  \"email\": \"prince.qups@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"phone\": \"123456789\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by user Name",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "creates list of user with given input array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 43,\r\n        \"username\": \"pk2\",\r\n        \"firstName\": \"pk2\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": 44,\r\n        \"username\": \"pk3\",\r\n        \"firstName\": \"pk3\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": 45,\r\n        \"username\": \"pk4\",\r\n        \"firstName\": \"pk4\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/createWithList"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Users With Array Input 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 151343,\r\n    \"username\": \"pk2\",\r\n    \"firstName\": \"pk2\",\r\n    \"lastName\": \"qups\",\r\n    \"email\": \"qups@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"123456789\",\r\n    \"userStatus\": 1\r\n  },\r\n  {\r\n    \"id\": 151344,\r\n    \"username\": \"pk3\",\r\n    \"firstName\": \"pk3\",\r\n    \"lastName\": \"qups\",\r\n    \"email\": \"qups@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"123456789\",\r\n    \"userStatus\": 1\r\n  },\r\n  {\r\n    \"id\": 151345,\r\n    \"username\": \"pk4\",\r\n    \"firstName\": \"pk4\",\r\n    \"lastName\": \"qups\",\r\n    \"email\": \"qups@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"123456789\",\r\n    \"userStatus\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/createWithArray"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 43,\r\n        \"username\": \"pk2\",\r\n        \"firstName\": \"pk2\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/pk43"
+			},
+			"response": []
+		},
+		{
+			"name": "Get updated user by username",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create list user using random",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let USER1_ID = Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_id\", USER1_ID);\r",
+							"\r",
+							"console.log(\"For user1, ID :\", USER1_ID);\r",
+							"\r",
+							"//////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_ID = Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_id\",USER2_ID);\r",
+							"\r",
+							"console.log(\"For user2, ID : \", USER2_ID);\r",
+							"\r",
+							"///////////////////////////////////////////////////\r",
+							"\r",
+							"//Company name: ABC Radio (username will start with \"\"ABC- and format : \"ABC-*****\" )\r",
+							"\r",
+							"let USER1_NAME = \"ABC-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_name\", USER1_NAME);\r",
+							"\r",
+							"console.log(\"For user1, USER NAME : \", USER1_NAME);\r",
+							"\r",
+							"//////////////////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_NAME = \"ABC-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_name\", USER2_NAME);\r",
+							"\r",
+							"console.log(\"For user2, USER NAME : \", USER2_NAME);\r",
+							"\r",
+							"//////////////////////////////////////////////////////////////\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"/* const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test('Status code is 200', function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test('Status String is OK', function () {\r",
+							"    pm.expect(jsonData.code).to.equal(200);\r",
+							"})\r",
+							"\r",
+							"pm.test('Full Response Body Check', function () {\r",
+							"    pm.expect(jsonData).to.be.an('object');\r",
+							"    pm.expect(jsonData.code).to.equal(200);\r",
+							"    pm.expect(jsonData.type).to.be.a('string');\r",
+							"    pm.expect(jsonData.message).to.be.a('string');\r",
+							"})\r",
+							"\r",
+							"pm.test('Response message is \\'ok\\'', function () {\r",
+							"    pm.expect(jsonData.message).to.equal('ok');\r",
+							"}) */\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"//////////////////////////////////////////////////////////////////\r",
+							"\r",
+							"let jsonResponse = pm.response.json();\r",
+							"\r",
+							"pm.test(\"verify response status is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Response body validation\r",
+							"pm.test(\"Verify response body code value is 200\", function(){\r",
+							"    pm.expect(200).to.eql(jsonResponse.code);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify response body message value is ok\", function(){\r",
+							"    pm.expect(\"ok\").to.eql(jsonResponse.message);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify response body type value is unknown\", function(){\r",
+							"    pm.expect(\"unknown\").to.eql(jsonResponse.type);\r",
+							"});\r",
+							"\r",
+							"////////////////////////////////////////////\r",
+							"//Response header validation \r",
+							"\r",
+							"pm.test(\"Verify response header key 'Content-Type'\", function(){\r",
+							"    pm.expect(\"application/json\").to.eql(pm.response.headers.get(\"Content-Type\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify response header key 'Content-Type'\", function(){\r",
+							"    pm.expect(\"keep-alive\").to.eql(pm.response.headers.get(\"Connection\"));\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"{{user1_id}}\",\r\n        \"username\": \"{{user1_name}}\",\r\n        \"firstName\": \"pk2\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": \"{{user2_id}}\",\r\n        \"username\": \"{{user2_name}}\",\r\n        \"firstName\": \"pk3\",\r\n        \"lastName\": \"qups\",\r\n        \"email\": \"qups@gmail.com\",\r\n        \"password\": \"1234\",\r\n        \"phone\": \"123456789\",\r\n        \"userStatus\": 1\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/createWithList"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "user1_id",
+			"value": ""
+		},
+		{
+			"key": "user2_id",
+			"value": ""
+		},
+		{
+			"key": "user1_name",
+			"value": ""
+		},
+		{
+			"key": "user2_name",
+			"value": ""
+		}
+	]
+}
